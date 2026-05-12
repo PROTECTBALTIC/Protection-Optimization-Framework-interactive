@@ -6,9 +6,7 @@
   <title>Baltic Sea Protection Optimization Framework</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -79,9 +77,7 @@
       font-size: 18px;
     }
 
-    .goal-right {
-      padding: 50px;
-    }
+    .goal-right { padding: 50px; }
 
     .goal-label {
       text-transform: uppercase;
@@ -111,6 +107,7 @@
       line-height: 1.8;
       cursor: pointer;
       transition: 0.2s;
+      min-height: 140px;
     }
 
     .strategy-box:hover {
@@ -123,17 +120,9 @@
       background: #ecfeff;
     }
 
-    .g1 {
-      background: linear-gradient(135deg, #0e7490, #0f172a);
-    }
-
-    .g2 {
-      background: linear-gradient(135deg, #047857, #134e4a);
-    }
-
-    .g3 {
-      background: linear-gradient(135deg, #d97706, #7c2d12);
-    }
+    .g1 { background: linear-gradient(135deg, #0e7490, #0f172a); }
+    .g2 { background: linear-gradient(135deg, #047857, #134e4a); }
+    .g3 { background: linear-gradient(135deg, #d97706, #7c2d12); }
 
     .explainer {
       margin-top: 40px;
@@ -156,7 +145,6 @@
       border-radius: 20px;
       padding: 24px;
       line-height: 1.9;
-      margin-bottom: 20px;
     }
 
     .relationships {
@@ -169,6 +157,7 @@
     .panel {
       border-radius: 24px;
       padding: 28px;
+      min-height: 400px;
     }
 
     .panel h4 {
@@ -201,16 +190,6 @@
       margin-bottom: 16px;
       border: 1px solid #dbe2ea;
       cursor: pointer;
-      transition: 0.2s;
-    }
-
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 18px rgba(0,0,0,0.05);
-    }
-
-    .card.active {
-      outline: 3px solid #0f172a;
     }
 
     .card-title {
@@ -224,25 +203,43 @@
       opacity: 0.85;
     }
 
-    .group-title {
-      font-weight: bold;
-      margin-bottom: 16px;
-      margin-top: 24px;
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.05);
     }
 
-    .hidden {
-      display: none;
+    .card.active {
+      border: 2px solid #0f172a;
+      background: #f8fafc;
+      box-shadow: 0 0 0 3px rgba(15,23,42,0.08);
     }
+
+    .policy-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+      margin-bottom: 24px;
+    }
+
+    .policy-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      background: #e0f2fe;
+      color: #075985;
+      border: 1px solid #bae6fd;
+    }
+
+    .hidden { display: none; }
 
     @media (max-width: 1100px) {
-      .goal {
-        grid-template-columns: 1fr;
-      }
-
-      .relationships {
-        grid-template-columns: 1fr;
-      }
-
+      .goal,
+      .relationships,
       .strategy-grid {
         grid-template-columns: 1fr;
       }
@@ -253,318 +250,761 @@
     }
   </style>
 </head>
-
 <body>
 
-  <section class="hero">
-    <div class="hero-small">
-      Baltic Sea Protection Optimization Framework
+<section class="hero">
+  <div class="hero-small">Baltic Sea Protection Optimization Framework</div>
+
+  <h1>
+    Baltic Sea Protection<br>
+    Optimization Framework
+  </h1>
+
+  <p>
+    The Baltic Sea protection efforts result in concrete positive biodiversity outcomes across national boundaries.
+  </p>
+</section>
+
+<div class="container">
+
+  <div class="goal">
+
+    <div class="goal-left g1">
+      <div class="goal-label">Goal G1</div>
+
+      <h2>Governance</h2>
+
+      <p>
+        By 2030, governance of Baltic Sea spatial protection is adaptive and organized.
+      </p>
     </div>
 
-    <h1>
-      Baltic Sea Protection<br>
-      Optimization Framework
-    </h1>
+    <div class="goal-right">
 
-    <p>
-      The Baltic Sea protection efforts result in concrete positive biodiversity outcomes across national boundaries,
-      verifiably contributing to a healthy and resilient Baltic Sea with diverse ecosystems,
-      functioning in balance, now and for future generations.
-    </p>
-  </section>
+      <div class="goal-label" style="color:#0e7490;">Linked Strategy</div>
 
-  <div class="container">
-
-    <!-- G1 -->
-    <div class="goal">
-
-      <div class="goal-left g1">
-        <div class="goal-label">Goal G1</div>
-
-        <h2>Governance</h2>
-
-        <p>
-          By 2030, the governance of Baltic Sea spatial protection is adaptive and organized to secure the effective achievement of the vision and goals for spatial protection in a transparent, accountable and legitimate way, including accounting for socio-economic context and aligned with international and national legislation and policy.
-        </p>
+      <div class="strategy-title">
+        Strategy 1: Good, effective, equitable and knowledge-driven governance of spatial protection measures at all levels
       </div>
 
-      <div class="goal-right">
+      <div class="strategy-grid">
 
-        <div class="goal-label" style="color:#0e7490;">
-          Linked Strategy
+        <div class="strategy-box" id="s11" onclick="toggleStrategy('s11-content','s11')">
+          <div>
+            S1.1 Enable and ensure governance vitality at all levels, including governance by government, by private individuals and organizations, by Indigenous Peoples and/or local communities as well as shared governance by various rightsholders and stakeholders together.
+          </div>
+
+          <div class="policy-pills">
+            <div class="policy-pill">CBD Target 8</div>
+            <div class="policy-pill">IUCN Green List</div>
+          </div>
         </div>
 
-        <div class="strategy-title">
-          S1: Good, effective, equitable and knowledge-driven governance of spatial protection measures at all levels
+        <div class="strategy-box" id="s12" onclick="toggleStrategy('s12-content','s12')">
+          <div>
+            S1.2 Ensure transparency in the governance process by clearly defining the decision-making process, the rationale for the decisions made and making all documentation relevant for stakeholders available in an accessible manner and timely manner, including accounting for language barriers.
+          </div>
+
+          <div class="policy-pills">
+            <div class="policy-pill">CBD Target 21</div>
+            <div class="policy-pill">IUCN Green List</div>
+          </div>
         </div>
 
-        <div class="strategy-grid">
-
-          <div class="strategy-box" id="s11" onclick="toggleS11()">
-            S1.1 Enable and ensure governance vitality at all levels
-          </div>
-
-          <div class="strategy-box">
-            S1.2 Ensure transparency in the governance process
-          </div>
-
-          <div class="strategy-box">
-            S1.3 Ensure clear accountability structures and implementation responsibilities
-          </div>
-
-          <div class="strategy-box">
-            S1.4 Guarantee legitimacy aligned with laws and inclusive processes
-          </div>
-
-          <div class="strategy-box">
-            S1.5 Ensure decision-making is based on best available information
-          </div>
-
-          <div class="strategy-box">
-            S1.6 Ensure governance structures support transboundary protection efforts
-          </div>
-
-          <div class="strategy-box">
-            S1.7 Guarantee consistent and fair enforcement of the rule of law
-          </div>
-
-          <div class="strategy-box">
-            S1.8 Guarantee an inclusive and balanced voice throughout governance processes
-          </div>
-
-          <div class="strategy-box">
-            S1.9 Understand direct and indirect economic context
-          </div>
-
-          <div class="strategy-box">
-            S1.10 Understand social and societal context
-          </div>
-
+        <div class="strategy-box">
+          S1.3 Ensure that there is a clear structure in place defining what entity at what level, and who, is accountable for what under the different decisions being made, as well as for their implementation. Ensure that there is a clear, fair, and just process for addressing accountability, at relevant levels of enforcement.
         </div>
 
-        <!-- S1.1 DETAILS -->
-        <div id="s11-content" class="hidden">
-
-          <div class="explainer">
-
-            <h3>
-              Governance vitality and adaptive governance
-            </h3>
-
-            <div class="explainer-box">
-              S1.1 Enable and ensure governance vitality at all levels, including governance by government, by private individuals and organizations, by Indigenous Peoples and/or local communities as well as shared governance by various rightsholders and stakeholders together (Borrini-Feyerabend et al. 2013).
-            </div>
-
-            <div class="explainer-box">
-              Governance and decision-making processes draw on the best available knowledge of the social and ecological context of the site, using an adaptive framework that anticipates, learns from, and responds to change and which draws on multiple knowledge sources, where these are available.
-            </div>
-
-            <div class="explainer-box">
-              Governance vitality ensures that decision-making processes are responsive, inclusive, and adaptive.
-            </div>
-
-            <div class="explainer-box">
-              A dynamic and vital governance framework allows for adjustments based on monitoring and evaluation and enhances the resilience of MPAs by enabling adaptive practices that respond to ecological and social changes.
-            </div>
-
-          </div>
-
-          <!-- RELATIONSHIPS -->
-          <div class="relationships">
-
-            <!-- OUTCOMES -->
-            <div class="panel outcomes">
-
-              <h4>Outcomes linked to S1.1</h4>
-
-              <div class="group-title">
-                Governance vitality outcome
-              </div>
-
-              <div class="card" id="o11" onclick="toggleOutcome()">
-                <div class="card-title">O1.1</div>
-                <div class="card-text">
-                  Historical changes and future projections in social, ecological, and climate conditions have been considered in sites, where relevant.
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-title">O1.2</div>
-                <div class="card-text">
-                  Planning and management processes utilize multiple knowledge sources.
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-title">O1.3</div>
-                <div class="card-text">
-                  Planning and decision-making recognize relevant conditions and goals.
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-title">O1.4</div>
-                <div class="card-text">
-                  Monitoring, evaluation and consultation inform management processes.
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-title">O1.5</div>
-                <div class="card-text">
-                  Institutional robustness is secured.
-                </div>
-              </div>
-
-              <div class="group-title">
-                Resource related outcome
-              </div>
-
-              <div class="card">
-                <div class="card-title">O1.6</div>
-                <div class="card-text">
-                  Long-term sustainability of financing is in place.
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-title">O1.7</div>
-                <div class="card-text">
-                  Sufficient resources are allocated to governance processes.
-                </div>
-              </div>
-
-            </div>
-
-            <!-- INDICATORS -->
-            <div class="panel indicators">
-
-              <h4>Indicators</h4>
-
-              <div id="indicators" class="hidden">
-
-                <div class="card" id="i11" onclick="toggleI11()">
-                  <div class="card-title">I1.1</div>
-                  <div class="card-text">
-                    Documentation of management processes clearly demonstrates knowledge sources through referencing.
-                  </div>
-                </div>
-
-                <div class="card" id="i12" onclick="toggleI12()">
-                  <div class="card-title">I1.2</div>
-                  <div class="card-text">
-                    Documentation of planning processes clearly demonstrates knowledge sources through referencing.
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-
-            <!-- TARGETS -->
-            <div class="panel targets">
-
-              <h4>Targets</h4>
-
-              <div id="t11" class="card hidden">
-                <div class="card-title">T1.1</div>
-
-                <div class="card-text">
-                  There has been an increase in number of sites that clearly demonstrates, through referencing, that site specific management processes have considered multiple knowledge sources.
-                </div>
-              </div>
-
-              <div id="t12" class="card hidden">
-                <div class="card-title">T1.2</div>
-
-                <div class="card-text">
-                  There has been an increase in number of sites that clearly demonstrates, through referencing, that site specific planning processes have considered multiple knowledge sources.
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-
+        <div class="strategy-box">
+          S1.4 Guarantee legitimacy by ensuring that governance, management and implementation of measures support the protection objectives and target of the area, and are in line with relevant national and international laws, regulations, directives and objectives, while ensuring an inclusive process...
         </div>
 
-      </div>
-
-    </div>
-
-    <!-- G2 -->
-    <div class="goal">
-
-      <div class="goal-left g2">
-        <div class="goal-label">Goal G2</div>
-
-        <h2>Planning & Designation</h2>
-
-        <p>
-          By 2030, the network of Baltic Sea spatial protection is strategically, effectively and adaptively planned from an ecological perspective, and is resilient and coherent.
-        </p>
-      </div>
-
-      <div class="goal-right">
-        <div class="strategy-title">
-          Strategy S2: Planning and designation of the network of spatial protection
+        <div class="strategy-box">
+          S1.5 Ensure that decision-making processes are based on best available information, and ensure that the function and resilience of the ecosystem remains the core principle underpinning governance and management decisions.
         </div>
-      </div>
 
-    </div>
-
-    <!-- G3 -->
-    <div class="goal">
-
-      <div class="goal-left g3">
-        <div class="goal-label">Goal G3</div>
-
-        <h2>Management</h2>
-
-        <p>
-          By 2040, the Baltic Sea spatial protection is adaptively, effectively and equitably managed in an ecologically relevant way and realizes the potential of the network to provide biodiversity benefits.
-        </p>
-      </div>
-
-      <div class="goal-right">
-        <div class="strategy-title">
-          Strategy S3: Adaptive management of spatial protection
+        <div class="strategy-box">
+          S1.6 Ensure governance structures support transboundary protection efforts.
         </div>
+
+        <div class="strategy-box">
+          S1.7 Guarantee consistent and fair enforcement of the rule of law to ensure compliance and the protection of rights operations.
+        </div>
+
+        <div class="strategy-box">
+          S1.8 Guarantee an inclusive and balanced voice throughout the relevant levels and stages of the governance process for those stakeholders who are impacted by the decisions being made.
+        </div>
+
+        <div class="strategy-box">
+          S1.9 Understand direct and indirect economic context.
+        </div>
+
+        <div class="strategy-box">
+          S1.10 Understand social and societal context, including both possible positive and negative well-being impacts, on a local and regional scale.
+        </div>
+
       </div>
 
     </div>
 
   </div>
 
-  <script>
+</div>
 
-    function toggleS11() {
-      const content = document.getElementById('s11-content');
-      const strategy = document.getElementById('s11');
+<div id="s11-content" class="container hidden">
 
-      content.classList.toggle('hidden');
-      strategy.classList.toggle('active');
+  <div class="explainer">
+    <h3>
+      S1.1 Enable and ensure governance vitality at all levels, including governance by government, by private individuals and organizations, by Indigenous Peoples and/or local communities as well as shared governance by various rightsholders and stakeholders together.</h3>
 
-      if(content.classList.contains('hidden')) {
-        document.getElementById('indicators').classList.add('hidden');
-        document.getElementById('t11').classList.add('hidden');
-        document.getElementById('t12').classList.add('hidden');
-      }
-    }
+    <div style="margin-bottom:18px; font-size:14px; opacity:0.75; letter-spacing:0.03em;">
+      <strong>Reference:</strong> Borrini-Feyerabend et al. 2013
+    </div>
 
-    function toggleOutcome() {
-      document.getElementById('indicators').classList.toggle('hidden');
-    }
+    <div class="policy-pills">
+      <div class="policy-pill">CBD Target 8</div>
+      <div class="policy-pill">IUCN Green List</div>
+    </div>
 
-    function toggleI11() {
-      document.getElementById('t11').classList.toggle('hidden');
-    }
+    <div class="explainer-box">
+      <p>
+        Governance and decision-making processes draw on the best available knowledge of the social and ecological context of the site, using an adaptive framework that anticipates, learns from, and responds to change and which draws on multiple knowledge sources, where these are available. Procedures are in place to ensure that results from monitoring, evaluation and consultation are used to inform management and planning processes including the establishment of goals and objectives. The site has, where relevant, considered historical changes and future projections in social, ecological and climate conditions (Modified from IUCN and World Commission on Protected Areas (WCPA) 2017 and CBD 2022d).
+      </p>
 
-    function toggleI12() {
-      document.getElementById('t12').classList.toggle('hidden');
-    }
+      <p>
+        Governance vitality ensures that decision-making processes are responsive, inclusive, and adaptive. Vital governance structures can facilitate timely and informed decisions that are crucial for effective management of MPAs, particularly in the face of emerging challenges such as climate change.
+      </p>
 
-  </script>
+      <p>
+        A dynamic and vital governance framework allows for adjustments based on monitoring and evaluation and enhances the resilience of MPAs by enabling adaptive practices that respond to ecological and social changes. This adaptability is critical for maintaining the ecological integrity and functionality of protected areas, allowing them to withstand and recover from disturbances (Armitage et al. 2008).
+      </p>
+
+      <p>
+        Governance vitality is also key to ensuring that resources are allocated efficiently and effectively. A robust governance framework can identify priority areas for investment, ensuring that limited funds are directed toward the most critical protection needs.
+      </p>
+    </div>
+  </div>
+
+  <div class="relationships">
+
+    <div class="panel outcomes">
+
+      <h4>Outcomes linked to S1.1</h4>
+
+      <div style="font-weight:bold; margin-bottom:18px; margin-top:8px; opacity:0.8;">
+        Governance vitality outcomes
+      </div>
+
+      <div class="card" onclick="showIndicators('o11', this)">
+        <div class="card-title">O1.1</div>
+        <div class="card-text">Historical changes and future projections in social, ecological, and climate conditions have been considered in sites, where relevant.</div>
+
+        <div class="policy-pills">
+          <div class="policy-pill">IUCN Green List</div>
+          <div class="policy-pill">NRR</div>
+          <div class="policy-pill">CBD Target 21</div>
+        </div>
+      </div>
+
+      <div class="card" onclick="showIndicators('o12', this)">
+        <div class="card-title">O1.2</div>
+        <div class="card-text">Planning and management processes utilize multiple knowledge sources (scientific, experiential, local, and traditional knowledge).</div>
+
+        <div class="policy-pills">
+          <div class="policy-pill">IUCN Green List</div>
+          <div class="policy-pill">NRR</div>
+          <div class="policy-pill">CBD Target 21</div>
+        </div>
+      </div>
+
+      <div class="card" onclick="showIndicators('o13', this)">
+        <div class="card-title">O1.3</div>
+        <div class="card-text">Planning and decision-making recognize relevant conditions, issues, and goals at regional, national, and local scales that impact the protected site.</div>
+      </div>
+
+      <div class="card" onclick="showIndicators('o14', this)">
+        <div class="card-title">O1.4</div>
+        <div class="card-text">Procedures are in place to ensure that results from monitoring, evaluation, and consultation are included and used to inform management and planning processes, including the establishment of goals and objectives, as well as subsequent management processes.</div>
+      </div>
+
+      <div class="card" onclick="showIndicators('o15', this)">
+        <div class="card-title">O1.5</div>
+        <div class="card-text">Institutional robustness is secured, ensuring sustained public trust, governance stability and integrity, and adaptability to ecological and socio-economic challenges.</div>
+      </div>
+
+      <div style="font-weight:bold; margin-top:28px; margin-bottom:18px; opacity:0.8;">
+        Resource related outcomes
+      </div>
+
+      <div class="card" onclick="showIndicators('o16', this)">
+        <div class="card-title">O1.6</div>
+        <div class="card-text">Long-term sustainability of financing is in place for management and measures.</div>
+      </div>
+
+      <div class="card" onclick="showIndicators('o17', this)">
+        <div class="card-title">O1.7</div>
+        <div class="card-text">Sufficient financial, technological, equipment, knowledge, and human resources are allocated to governance processes.</div>
+      </div>
+
+      <div class="card" onclick="showIndicators('o18', this)">
+        <div class="card-title">O1.8</div>
+        <div class="card-text">Resources are distributed in an equitable, transparent, and sustainable manner across all governmental jurisdiction levels.</div>
+      </div>
+
+    </div>
+
+    <div class="panel indicators">
+
+      <h4 id="indicator-title">Indicators</h4>
+
+      <div id="indicator-groups">
+
+        <div id="o11" class="hidden">
+
+          <div class="card" onclick="showTargets('i13', this)">
+            <div class="card-title">I1.3</div>
+            <div class="card-text">Historical changes and/or future projections in social conditions are included in management plan or equivalent.</div>
+          </div>
+
+          <div class="card" onclick="showTargets('i14', this)">
+            <div class="card-title">I1.4</div>
+            <div class="card-text">Historical changes and/or future projections in ecological conditions are included in management plan or equivalent.</div>
+          </div>
+
+          <div class="card" onclick="showTargets('i15', this)">
+            <div class="card-title">I1.5</div>
+            <div class="card-text">Historical changes and/or future projections in climate conditions are included in management plan or equivalent.</div>
+          </div>
+
+        </div>
+
+        <div id="o12" class="hidden">
+
+          <div class="card" onclick="showTargets('i11', this)">
+            <div class="card-title">I1.1</div>
+            <div class="card-text">Documentation of management processes clearly demonstrates knowledge sources (scientific, experiential, local and traditional knowledge) through referencing, and how they are sourced and used in decision-making processes.</div>
+          </div>
+
+          <div class="card" onclick="showTargets('i12', this)">
+            <div class="card-title">I1.2</div>
+            <div class="card-text">Documentation of planning processes clearly demonstrates knowledge sources (scientific, experiential, local and traditional knowledge) through referencing, and how they were used in decision-making processes.</div>
+          </div>
+
+        </div>
+
+        <div id="o13" class="hidden">
+
+          <div class="card" onclick="showTargets('i16', this)">
+            <div class="card-title">I1.6</div>
+            <div class="card-text">It is clearly documented in the sites management plan, or similar document, how relevant conditions, issues and goals at regional scale which impact the protected area have been included in planning and decision-making.</div>
+          </div>
+
+          <div class="card" onclick="showTargets('i17', this)">
+            <div class="card-title">I1.7</div>
+            <div class="card-text">It is clearly documented in the sites management plan, or similar document, how relevant conditions, issues and goals at national scale which impact the protected area have been included in planning and decision-making.</div>
+          </div>
+
+          <div class="card" onclick="showTargets('i18', this)">
+            <div class="card-title">I1.8</div>
+            <div class="card-text">It is clearly documented in the sites management plan, or similar document, how relevant conditions, issues and goals at local scale which impact the protected area have been included in planning and decision-making.</div>
+          </div>
+
+        </div>
+
+        <div id="o14" class="hidden">
+
+          <div class="card" onclick="showTargets('i19', this)">
+            <div class="card-title">I1.9</div>
+            <div class="card-text">Procedures for connecting evaluation and consultation with planning/management processes are clearly documented.</div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel targets" id="targets-panel">
+
+      <h4 id="target-title">Targets</h4>
+
+      <div id="target-groups">
+
+        <div id="i13" class="hidden">
+          <div class="card">
+            <div class="card-title">T1.3</div>
+            <div class="card-text">100% of sites included consideration of historical changes and/or future projections of pressures and human activities in the management plan or equivalent</div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">T1.4</div>
+            <div class="card-text">There has been an increase in number of sites that have social conditions included in the management plan or equivalent (50% of sites by 2050).</div>
+          </div>
+        </div>
+
+        <div id="i14" class="hidden">
+          <div class="card">
+            <div class="card-title">T1.5</div>
+            <div class="card-text">100% of sites included consideration of historical changes and/or future projections of ecological conditions included in the management plan or equivalent?</div>
+          </div>
+        </div>
+
+        <div id="i15" class="hidden">
+          <div class="card">
+            <div class="card-title">T1.6</div>
+            <div class="card-text">There has been an increase in number of sites that have consideration of historical changes and/or future projections climate conditions included in the management plan or equivalent (50% of sites by 2050)</div>
+          </div>
+        </div>
+
+        <div id="i11" class="hidden">
+          <div class="card">
+            <div class="card-title">T1.1</div>
+            <div class="card-text">There has been an increase in number of sites that clearly demonstrates, through referencing, that site specific management processes have considered multiple knowledge sources (scientific, experiential, local and traditional knowledge), and how they were used in decision-making processes (90% of sites by 2034)</div>
+          </div>
+        </div>
+
+        <div id="i12" class="hidden">
+          <div class="card">
+            <div class="card-title">T1.2</div>
+            <div class="card-text">There has been an increase in number of sites that clearly demonstrates, through referencing, that site specific planning processes have considered multiple knowledge sources (scientific, experiential, local and traditional knowledge), and how they were used in decision-making processes. \(90% of sites by 2034\)</div>
+          </div>
+        </div>
+
+        <div id="i16" class="hidden">
+          <div class="card"><div class="card-title">T1.7</div><div class="card-text">There has been an increase in number of sites that clearly document in the sites management plan, or similar document, how relevant conditions, issues and goals at regional scale, which impact the protected area, have been included in planning and decision-making (90% of sites by 2034).</div></div>
+        </div>
+
+        <div id="i17" class="hidden">
+          <div class="card"><div class="card-title">T1.8</div><div class="card-text">There has been an increase in number of sites that clearly document in the sites management plan, or similar document, how relevant conditions, issues and goals at national scale which impact the protected area have been included in planning and decision-making (90% of sites by 2034).</div></div>
+        </div>
+
+        <div id="i18" class="hidden">
+          <div class="card"><div class="card-title">T1.9</div><div class="card-text">There has been an increase in number of sites that clearly document what recommendations for adaptive management actions have been made based on the results of evaluation and consultation processes. (90% of sites by 2034)</div></div>
+        </div>
+
+        <div id="i19" class="hidden">
+          <div class="card"><div class="card-title">T1.10</div><div class="card-text">There has been an increase in number of sites that clearly document what the procedure for how the results of evaluation and consultation processes are considered in planning and management processes. (90% of sites by 2034)</div></div>
+        </div>
+
+        <div id="i141" class="hidden">
+          <div class="card"><div class="card-title">T1.40</div><div class="card-text">Ecosystem resilience guides decisions.</div></div>
+          <div class="card"><div class="card-title">T1.41</div><div class="card-text">Measures evaluated for effectiveness.</div></div>
+          <div class="card"><div class="card-title">T1.42</div><div class="card-text">Precautionary principle used.</div></div>
+        </div>
+
+        <div id="i110" class="hidden">
+          <div class="card"><div class="card-title">T1.11</div><div class="card-text">Institutional robustness secured.</div></div>
+        </div>
+
+        <div id="i111" class="hidden">
+          <div class="card"><div class="card-title">T1.12</div><div class="card-text">Adaptability to ecological challenges.</div></div>
+        </div>
+
+        <div id="i112" class="hidden">
+          <div class="card"><div class="card-title">T1.12</div><div class="card-text">Adaptability to socio-economic challenges.</div></div>
+        </div>
+
+        <div id="i113" class="hidden">
+          <div class="card"><div class="card-title">T1.13</div><div class="card-text">Inflation compensation included.</div></div>
+        </div>
+
+        <div id="i114" class="hidden">
+          <div class="card"><div class="card-title">T1.14</div><div class="card-text">Multiple funding sources identified.</div></div>
+        </div>
+
+        <div id="i115" class="hidden">
+          <div class="card"><div class="card-title">T1.15</div><div class="card-text">Cost estimates prepared.</div></div>
+        </div>
+
+        <div id="i116" class="hidden">
+          <div class="card"><div class="card-title">T1.16</div><div class="card-text">Periodic resource assessments undertaken.</div></div>
+        </div>
+
+        <div id="i117" class="hidden">
+          <div class="card"><div class="card-title">T1.17</div><div class="card-text">Resource distribution documented publicly.</div></div>
+        </div>
+
+        <div id="i118" class="hidden">
+          <div class="card"><div class="card-title">T1.18</div><div class="card-text">Optimisation framework guides prioritisation.</div></div>
+        </div>
+
+        <div id="i119" class="hidden">
+          <div class="card">
+            <div class="card-title">T1.19</div>
+            <div class="card-text">Funding allocated for MPAs reported.</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+<div id="s12-content" class="container hidden">
+
+  <div class="explainer">
+    <h3>
+      S1.2 Ensure transparency in the governance process by clearly defining the decision-making process, the rationale for the decisions made and making all documentation relevant for stakeholders available in an accessible manner and timely manner, including accounting for language barriers.
+    </h3>
+
+    <div class="explainer-box">
+      <p>
+        Governance and decision making are open to scrutiny by all relevant stakeholders, with information presented in appropriate formats and in good time, and the reasoning behind decisions evident. Collaboration and information flow between different levels of governance is clear and the information on these workflows is accessible (Modified from IUCN and World Commission on Protected Areas (WCPA) 2017).
+      </p>
+
+      <p>
+        Transparency fosters trust among stakeholders. When decision-making processes are open and information is readily available, stakeholders are more likely to feel that their voices are heard, and that governance is legitimate. This trust is vital for ensuring community support and compliance with MPA regulations.
+      </p>
+
+      <p>
+        When stakeholders understand the rationale behind management decisions and see transparent reporting on the outcomes of protection measures, they are also more likely to comply with regulations. This understanding fosters a sense of ownership and stewardship among local communities, leading to better conservation outcomes.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<div id="s13-content" class="container hidden">
+  <div class="explainer">
+    <h3>S1.3 Ensure that there is a clear structure in place defining what entity at what level, and who, is accountable for what under the different decisions being made, as well as for their implementation. Ensure that there is a clear, fair, and just process for addressing accountability, at relevant levels of enforcement.</h3>
+
+    <div class="explainer-box">
+      <p>
+        Responsibilities for decision making and implementation are clear, including an appropriate, readily accessible process to identify, hear and resolve complaints, disputes, or grievances related to the governance or management of the site (Modified from IUCN and World Commission on Protected Areas (WCPA) 2017).
+      </p>
+
+      <p>
+        Clear governance structures help to hold decision makers accountable for their actions and decisions, or the lack thereof. When governance processes are open to scrutiny, it becomes more difficult for maladministration, corruption, or mismanagement to occur.
+      </p>
+
+      <p>
+        Accountability fosters trust and when governance processes are transparent and decision makers are held accountable for their actions, stakeholders are more likely to perceive the governance system as credible. This trust is essential for garnering support for MPA initiatives and ensuring compliance with regulations.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="s14-content" class="container hidden">
+  <div class="explainer">
+    <h3>S1.4 Guarantee legitimacy by ensuring that governance, management and implementation of measures support the protection objectives and target of the area, and are in line with relevant national and international laws, regulations, directives and objectives, while ensuring an inclusive process.</h3>
+
+    <div class="explainer-box">
+      <p>
+        There are clearly defined, legitimate, equitable, and functional governance arrangements, in which the interests of civil society, rightsholders and relevant stakeholders, are fairly represented and addressed, including those relating to the establishment or designation of the site (Modified from IUCN and World Commission on Protected Areas (WCPA) 2017). Relevant national and international laws, regulations, directives, and objectives are being implemented.
+      </p>
+
+      <p>
+        When stakeholders perceive governance processes as legitimate, they are more likely to comply with regulations and actively engage in stewardship activities.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="s15-content" class="container hidden">
+  <div class="explainer">
+    <h3>S1.5 Ensure that decision-making processes are based on best available information, and ensure that the function and resilience of the ecosystem remains the core principle underpinning governance and management decisions.</h3>
+
+    <div class="explainer-box">
+      <p>
+        Ensure that the best available data, information and knowledge, is accessible to, and used by, decision makers, practitioners and the public to guide effective and equitable governance, integrated and participatory management of biodiversity, and to strengthen communication, awareness raising, education, monitoring, research and knowledge management (CBD 2022g).
+      </p>
+
+      <p>
+        Due diligence has been exercised in collating and considering information, available to guide and substantiate decisions, including consideration of information from multiple sources and across the local to global scale.
+      </p>
+
+      <p>
+        The use of high-quality, relevant data ensures that decision makers can make informed choices about protection strategies and management practices. Accurate and comprehensive information enables decision makers to identify and prioritize critical areas for protection and interventions effectively.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="s16-content" class="container hidden">
+  <div class="explainer">
+    <h3>S1.6 Ensure governance structures support transboundary protection efforts.</h3>
+
+    <div class="explainer-box">
+      <p>
+        Planning and decision making takes a holistic approach and recognizes relevant conditions, issues, and goals beyond the individual site, at national and regional scale, which may impact the protected area and the network.
+      </p>
+
+      <p>
+        A transboundary governance framework facilitates cooperation and equitable resource management, reducing conflicts over resource use, and allowing countries to collaboratively address threats through joint response strategies.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="s17-content" class="container hidden">
+  <div class="explainer">
+    <h3>S1.7 Guarantee consistent and fair enforcement of the rule of law to ensure compliance and the protection of rights operations.</h3>
+
+    <div class="explainer-box">
+      <p>
+        Ensure the full, equitable, inclusive, effective and gender-responsive access to justice and information for relevant rightsholders and stakeholders.
+      </p>
+
+      <p>
+        Transparent and accessible governance processes are in place to ensure that relevant laws, regulations, and restrictions are fairly and effectively applied in all aspects of protected area operations.
+      </p>
+
+      <p>
+        Fair enforcement of laws and regulations is critical for maintaining social equity and ensuring that all stakeholders are treated justly.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="s18-content" class="container hidden">
+  <div class="explainer">
+    <h3>S1.8 Guarantee an inclusive and balanced voice throughout the relevant levels and stages of the governance process for those stakeholders who are impacted by the decisions being made.</h3>
+
+    <div class="explainer-box">
+      <p>
+        Ensure the full, equitable, inclusive, effective and gender-responsive representation and participation in decision-making related to protection by relevant rightsholders and stakeholders.
+      </p>
+
+      <p>
+        Inclusive governance structures can help mitigate conflicts with and among stakeholders by providing a platform for dialogue and negotiation.
+      </p>
+
+      <p>
+        Inclusive governance processes also promote equity by ensuring that marginalized and underrepresented groups have a voice in decision making.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="s19-content" class="container hidden">
+  <div class="explainer">
+    <h3>S1.9 Understand direct and indirect economic context.</h3>
+
+    <div class="explainer-box">
+      <p>
+        The economic context of the site, including the positive and negative economic impacts of the way it is managed, is understood, and reflected in the site goals and objectives.
+      </p>
+
+      <p>
+        Understanding the economic context helps quantify the value of ecosystem services provided by MPAs and aids in the design of financing mechanisms to support MPA management.
+      </p>
+
+      <p>
+        Recognizing the economic context allows policymakers to make informed decisions that balance protection goals with economic interests.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="s110-content" class="container hidden">
+  <div class="explainer">
+    <h3>S1.10 Understand social and societal context, including both possible positive and negative well-being impacts, on a local and regional scale.</h3>
+
+    <div class="explainer-box">
+      <p>
+        The socio-cultural context of the site, including the positive and negative societal impacts of the decision related to it, is understood, and reflected in site management goals and objectives.
+      </p>
+
+      <p>
+        Incorporating social considerations in MPA governance promotes equity and social justice by ensuring that marginalized and vulnerable groups have a voice in decision-making processes.
+      </p>
+
+      <p>
+        Understanding the social context fosters community engagement and support for MPAs and helps identify potential conflicts and trade-offs.
+      </p>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="container">
+
+  <div class="goal">
+
+    <div class="goal-left g2">
+      <div class="goal-label">Goal G2</div>
+
+      <h2>Planning & Designation</h2>
+
+      <p>
+        By 2030, the network of Baltic Sea spatial protection is strategically, effectively and adaptively planned from an ecological perspective, and is resilient and coherent.
+      </p>
+    </div>
+
+    <div class="goal-right">
+
+      <div class="goal-label" style="color:#047857;">Linked Strategy</div>
+
+      <div class="strategy-title">
+        Strategy 2: Planning and designation of the network of spatial protection
+      </div>
+
+      <div class="strategy-grid">
+
+        <div class="strategy-box">S2.1 Ensure that the network is based on sites which are ecologically adequate and viable.</div>
+        <div class="strategy-box">S2.2 Ensure sufficient replication of ecosystem components, functions, and services.</div>
+        <div class="strategy-box">S2.3 Ensure that the network is ecologically representative.</div>
+        <div class="strategy-box">S2.4 Ensure focus on areas of special ecological and biodiversity importance.</div>
+        <div class="strategy-box">S2.5 Maximise ecosystem service provision where compatible with natural values.</div>
+        <div class="strategy-box">S2.6 Ensure that the network is well connected.</div>
+        <div class="strategy-box">S2.7 Ensure long-term protection.</div>
+        <div class="strategy-box">S2.8 Ensure threats and challenges are understood.</div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="goal">
+
+    <div class="goal-left g3">
+      <div class="goal-label">Goal G3</div>
+
+      <h2>Management</h2>
+
+      <p>
+        By 2040, the Baltic Sea spatial protection is adaptively, effectively and equitably managed.
+      </p>
+    </div>
+
+    <div class="goal-right">
+
+      <div class="goal-label" style="color:#d97706;">Linked Strategy</div>
+
+      <div class="strategy-title">
+        Strategy 3: Adaptive management of spatial protection
+      </div>
+
+      <div class="strategy-grid">
+
+        <div class="strategy-box">S3.1 Include management efforts, financing and measures in a long-term strategy.</div>
+        <div class="strategy-box">S3.2 Enhance positive transboundary biodiversity effects.</div>
+        <div class="strategy-box">S3.3 Ensure measures are sufficient, effective and cost-efficient.</div>
+        <div class="strategy-box">S3.4 Address current and future pressures and threats.</div>
+        <div class="strategy-box">S3.5 Ensure laws and regulations are implemented and enforced.</div>
+        <div class="strategy-box">S3.6 Monitor trends in activities, pressures and site values.</div>
+        <div class="strategy-box">S3.7 Regularly review management and measures.</div>
+        <div class="strategy-box">S3.8 Consider social and societal context.</div>
+        <div class="strategy-box">S3.9 Consider economic context.</div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+
+function safeGet(id) {
+  return document.getElementById(id);
+}
+
+function toggleStrategy(contentId, strategyId) {
+  const content = safeGet(contentId);
+  const strategy = safeGet(strategyId);
+
+  if (!content || !strategy) return;
+
+  content.classList.toggle('hidden');
+  strategy.classList.toggle('active');
+}
+
+function showIndicators(groupId, cardElement) {
+
+  const alreadyActive = cardElement.classList.contains('active');
+
+  document.querySelectorAll('.outcomes .card').forEach(card => {
+    card.classList.remove('active');
+  });
+
+  document.querySelectorAll('.indicators .card').forEach(card => {
+    card.classList.remove('active');
+  });
+
+  document.querySelectorAll('#indicator-groups > div').forEach(el => {
+    el.classList.add('hidden');
+  });
+
+  document.querySelectorAll('#target-groups > div').forEach(el => {
+    el.classList.add('hidden');
+  });
+
+  if(alreadyActive) {
+    safeGet('indicator-title').innerText = 'Indicators';
+    safeGet('target-title').innerText = 'Targets';
+    return;
+  }
+
+  cardElement.classList.add('active');
+
+  document.querySelectorAll('#indicator-groups > div').forEach(el => {
+    el.classList.add('hidden');
+  });
+
+  const group = safeGet(groupId);
+  if (group) {
+    group.classList.remove('hidden');
+  }
+
+  const title = safeGet('indicator-title');
+  if (title) {
+    title.innerText = 'Indicators linked to O1.' + groupId.substring(2);
+  }
+
+  document.querySelectorAll('#target-groups > div').forEach(el => {
+    el.classList.add('hidden');
+  });
+
+  const targetTitle = safeGet('target-title');
+  if (targetTitle) {
+    targetTitle.innerText = 'Targets';
+  }
+}
+
+function showTargets(groupId, cardElement) {
+
+  const alreadyActive = cardElement.classList.contains('active');
+
+  document.querySelectorAll('.indicators .card').forEach(card => {
+    card.classList.remove('active');
+  });
+
+  document.querySelectorAll('#target-groups > div').forEach(el => {
+    el.classList.add('hidden');
+  });
+
+  if(alreadyActive) {
+    safeGet('target-title').innerText = 'Targets';
+    return;
+  }
+
+  cardElement.classList.add('active');
+
+  document.querySelectorAll('#target-groups > div').forEach(el => {
+    el.classList.add('hidden');
+  });
+
+  const group = safeGet(groupId);
+  if (group) {
+    group.classList.remove('hidden');
+  }
+
+  const title = safeGet('target-title');
+  if (title) {
+    title.innerText = 'Targets linked to I1.' + groupId.substring(2);
+  }
+}
+
+</script>
 
 </body>
 </html>
